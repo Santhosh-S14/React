@@ -1,29 +1,32 @@
 class IndecisionApp extends React.Component {
-    render(){
+    render() {
+        const title = 'Indecision';
+        const subtitle = 'Put your life in hands of a computer';
+        const options = ['Thing one', 'Thing two', 'Thing three'];
         return (
             <div>
-                <Header/>
-                <Action/>
-                <Options/>
-                <AddOption/>
+                <Header title={title} subtitle={subtitle} />
+                <Action />
+                <Options options={options} />
+                <AddOption />
             </div>
         );
     }
 }
 
 class Header extends React.Component {
-render() {
-    return (
-        <div>
-            <h1>Indecision</h1>
-            <h2>Put your life in hands of a computer</h2>
-        </div>
-    );
-}
+    render() {
+        return (
+            <div>
+                <h1>{this.props.title}</h1>
+                <h2>{this.props.subtitle}</h2>
+            </div>
+        );
+    }
 }
 
 class Action extends React.Component {
-    render(){
+    render() {
         return (
             <div>
                 <button>What should I do!</button>
@@ -33,10 +36,10 @@ class Action extends React.Component {
 }
 
 class Options extends React.Component {
-    render(){
+    render() {
         return (
             <div>
-                Options component here
+                {this.props.options.map((option) => <Option key={option} optionText={option} />)}
                 <Option></Option>
             </div>
         );
@@ -44,17 +47,17 @@ class Options extends React.Component {
 }
 
 class Option extends React.Component {
-    render(){
+    render() {
         return (
             <div>
-                Option component here
+                {this.props.optionText}
             </div>
         );
     }
 }
 
 class AddOption extends React.Component {
-    render(){
+    render() {
         return (
             <div>
                 AddOption component here
@@ -63,4 +66,4 @@ class AddOption extends React.Component {
     }
 }
 
-ReactDOM.render(<IndecisionApp/>, document.getElementById('app'));
+ReactDOM.render(<IndecisionApp />, document.getElementById('app'));
