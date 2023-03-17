@@ -60,74 +60,142 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 33);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/******/ ({
+
+/***/ 10:
+/***/ (function(module, exports) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_js__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__person_js__ = __webpack_require__(2);
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open 'E:\\My learning\\React\\react-course-projects\\indecision-app\\node_modules\\react\\index.js'");
+
+/***/ }),
+
+/***/ 33:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 
 
+var _utils = __webpack_require__(34);
+
+var _utils2 = _interopRequireDefault(_utils);
+
+var _person = __webpack_require__(35);
+
+var _person2 = _interopRequireDefault(_person);
+
+var _validator = __webpack_require__(36);
+
+var _validator2 = _interopRequireDefault(_validator);
+
+var _react = __webpack_require__(10);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(87);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 console.log('app.js is running!!!');
 
 //named exports
-console.log(__WEBPACK_IMPORTED_MODULE_0__utils_js__["c" /* square */](4));
-console.log(__WEBPACK_IMPORTED_MODULE_0__utils_js__["a" /* add */](100, 23));
+console.log((0, _utils.square)(4));
+console.log((0, _utils.add)(100, 23));
 
 //default export
-console.log(__WEBPACK_IMPORTED_MODULE_0__utils_js__["b" /* default */](100, 23));
+console.log((0, _utils2.default)(100, 23));
 
 //another example to test
-console.log(__WEBPACK_IMPORTED_MODULE_1__person_js__["c" /* isAdult */](18));
-console.log(__WEBPACK_IMPORTED_MODULE_1__person_js__["a" /* canDrink */](21));
-console.log(__WEBPACK_IMPORTED_MODULE_1__person_js__["b" /* default */](64));
+console.log("Is Adult: ", (0, _person.isAdult)(18));
+console.log("Can Drink: ", (0, _person.canDrink)(21));
+console.log("Is Senior: ", (0, _person2.default)(64));
+
+console.log("Verify email: ", _validator2.default.isEmail('test@gmail.com'));
+
+var template = _react2.default.createElement(
+  'p',
+  null,
+  'THIS IS JSX FROM WEBPACK'
+);
+_reactDom2.default.render(template, document.getElementById('app'));
 
 /***/ }),
-/* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+/***/ 34:
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return square; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return add; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return subtract; });
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 console.log('utils.js is running!');
 
-const square = (x) => x * x;
+var square = function square(x) {
+  return x * x;
+};
 
-const add = (a, b) => a + b;
+var add = function add(a, b) {
+  return a + b;
+};
 
-const subtract = (a, b) => a - b;
+var subtract = function subtract(a, b) {
+  return a - b;
+};
 
-
-
+exports.square = square;
+exports.add = add;
+exports.default = subtract;
 
 /***/ }),
-/* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+/***/ 35:
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return isAdult; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return canDrink; });
-const isAdult = (x) => {
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var isAdult = function isAdult(x) {
     return x >= 18;
 };
 
-const canDrink = (y) => {
+var canDrink = function canDrink(y) {
     return y >= 21;
 };
 
-const isSenior = (z) => {
+var isSenior = function isSenior(z) {
     return z >= 65;
 };
 
+exports.isAdult = isAdult;
+exports.canDrink = canDrink;
+exports.default = isSenior;
 
-/* harmony default export */ __webpack_exports__["b"] = (isSenior);
+/***/ }),
+
+/***/ 36:
+/***/ (function(module, exports) {
+
+"use strict";
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open 'E:\\My learning\\React\\react-course-projects\\indecision-app\\node_modules\\validator\\index.js'");
+
+/***/ }),
+
+/***/ 87:
+/***/ (function(module, exports) {
+
+"use strict";
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open 'E:\\My learning\\React\\react-course-projects\\indecision-app\\node_modules\\react-dom\\index.js'");
 
 /***/ })
-/******/ ]);
+
+/******/ });
