@@ -4,10 +4,10 @@ export default class Action extends React.Component {
     render() {
         return (
             <div>
-                <button
+                <button className="big-button"
                     onClick={this.props.handlePick}
                     disabled={!this.props.hasOptions}>
-                    What should I do!
+                    What should I do?
                 </button>
             </div>
         );
