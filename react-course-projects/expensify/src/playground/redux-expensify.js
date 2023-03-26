@@ -164,15 +164,15 @@ store.subscribe(() =>{
 
 const expenseOne = store.dispatch(addExpense({description: 'Rent', amount: 45000, createdAt: -21000}));
 const expenseTwo = store.dispatch(addExpense({description: 'Coffee', amount: 450, createdAt: -1000}));
-// store.dispatch(removeExpense({ id: expenseOne.expense.id }));
-// store.dispatch(editExpense(expenseTwo.expense.id, { amount: 500 }));
+store.dispatch(removeExpense({ id: expenseOne.expense.id }));
+store.dispatch(editExpense(expenseTwo.expense.id, { amount: 500 }));
 
-// store.dispatch(setTextFilter('ffe'));
+store.dispatch(setTextFilter('ffe'));
 store.dispatch(sortByAmount());
-// store.dispatch(sortByDate());
-// store.dispatch(setStartDate(0));
-// store.dispatch(setStartDate());
-// store.dispatch(setEndDate(999));
+store.dispatch(sortByDate());
+store.dispatch(setStartDate(0));
+store.dispatch(setStartDate());
+store.dispatch(setEndDate(999));
 
 const demoState = {
     expenses: [{
