@@ -1,0 +1,22 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "Learning react from Namaste react course",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Santhosh-S14/React.git"
+  },
+  "author": "Santhosh Santhanam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Santhosh-S14/React/issues"
+  },
+  "homepage": "https://github.com/Santhosh-S14/React#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0"
+  }
+}
