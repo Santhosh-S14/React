@@ -12,9 +12,22 @@ const RestaurantMenu = () => {
   const { name, cuisines, costForTwoMessage } =
     resInfo?.data?.cards[0]?.card?.card?.info;
 
-  const { itemCards } =
-    resInfo.data.cards[2].groupedCard.cardGroupMap?.REGULAR?.cards[1]?.card
-      ?.card;
+  let itemCards = null;
+  if (
+    resInfo.data.cards[2].groupedCard.cardGroupMap?.REGULAR?.cards[2].card.card
+      .itemCards
+  ) {
+    itemCards =
+      resInfo.data.cards[2].groupedCard.cardGroupMap?.REGULAR?.cards[2].card
+        .card.itemCards;
+  } else if (
+    resInfo.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[1].card.card
+      .itemCards
+  ) {
+    itemCards =
+      resInfo.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[1].card.card
+        .itemCards;
+  }
 
   return (
     <div className="menu">
