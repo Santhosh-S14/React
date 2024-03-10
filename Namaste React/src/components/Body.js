@@ -1,4 +1,4 @@
-import RestaurantContainer from "./RestaurantContainer";
+import RestaurantContainer, { withPromotedLabel } from "./RestaurantContainer";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -11,6 +11,8 @@ const Body = () => {
   );
   const [searchText, setSearchText] = useState("");
   const onlineStatus = useOnlineStatus();
+
+  const RestaurantPromotedCard = withPromotedLabel(RestaurantContainer);
 
   useEffect(() => {
     fetchData();
@@ -26,6 +28,10 @@ const Body = () => {
     );
     setFilteredListOfRestaurants(
       json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
+    );
+    console.log(
+      json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants[0]
+        .info.aggregatedDiscountInfoV3
     );
   };
 
@@ -85,7 +91,11 @@ const Body = () => {
             to={"/restaurants/" + restaurant.info.id}
             key={restaurant.info.id}
           >
-            <RestaurantContainer resData={restaurant} />
+            {restaurant.info.aggregatedDiscountInfoV3 ? (
+              <RestaurantPromotedCard resData={restaurant} />
+            ) : (
+              <RestaurantContainer resData={restaurant} />
+            )}
           </Link>
         ))}
       </div>

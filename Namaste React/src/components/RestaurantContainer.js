@@ -22,4 +22,19 @@ const RestaurantContainer = (props) => {
   );
 };
 
+export const withPromotedLabel = (RestaurantContainer) => {
+  return (props) => {
+    return (
+      <div className="relative">
+        <label className="absolute top-0 left-0 bg-black text-white m-2 p-2 rounded-lg z-10">
+          {props.resData.info.aggregatedDiscountInfoV3.header +
+            " " +
+            props.resData.info.aggregatedDiscountInfoV3.subHeader}
+        </label>
+        <RestaurantContainer {...props} />
+      </div>
+    );
+  };
+};
+
 export default RestaurantContainer;
