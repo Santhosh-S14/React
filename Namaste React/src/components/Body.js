@@ -29,10 +29,6 @@ const Body = () => {
     setFilteredListOfRestaurants(
       json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
     );
-    console.log(
-      json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants[0]
-        .info.aggregatedDiscountInfoV3
-    );
   };
 
   if (listOfRestaurants.length === 0) {
@@ -52,6 +48,7 @@ const Body = () => {
       <div className="filter flex">
         <div className="search m-4 p-4">
           <input
+            data-testid="searchInput"
             type="text"
             className="border border-solid border-black"
             value={searchText}
@@ -78,7 +75,7 @@ const Body = () => {
               const filteredList = listOfRestaurants.filter(
                 (res) => res.info.avgRating > 4
               );
-              setListOfRestaurants(filteredList);
+              setFilteredListOfRestaurants(filteredList);
             }}
           >
             Top rated restaurants
