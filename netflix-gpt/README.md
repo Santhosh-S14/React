@@ -20,6 +20,11 @@
 - Created a constants.js file for all the constants
 - Registered an app and received an API key for querying details from TMDB server
 - Created a movie slice for and a reducer for now playing movies
+- Created 2 containers in the browse page, MainContainer for the trailer videos and SecondaryContainer for the recommendations
+- Created a reducer for trailer video and extracted trailer video from the API data based on movie Id.
+- Developed the video title and a small description of the video in the VideoTitle container
+- Embeded the trailer video in the VideoBackground container and made the VideoTitle float on top of the VideoBackground container
+- Made the app better with some tailwind CSS and added autoplay feature to the video
 
 # Features
 
