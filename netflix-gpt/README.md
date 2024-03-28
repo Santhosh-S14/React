@@ -25,6 +25,11 @@
 - Developed the video title and a small description of the video in the VideoTitle container
 - Embeded the trailer video in the VideoBackground container and made the VideoTitle float on top of the VideoBackground container
 - Made the app better with some tailwind CSS and added autoplay feature to the video
+- Built the Secondary Container with Movies list and movie cards
+- Added different movies list and cards respectively
+- Made the app beautiful with some tailwind CSS
+- Custom hooks to get different movies data from TMDB
+- Added reducers to movie slice to add respective movie to their list
 
 # Features
 
